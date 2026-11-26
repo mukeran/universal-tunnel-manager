@@ -15,7 +15,7 @@ final class ToolProcess {
         var template = Array(FileManager.default.temporaryDirectory
             .appendingPathComponent("mobile-tunnel.XXXXXX").path.utf8CString)
         let descriptor = mkstemp(&template)
-        guard descriptor >= 0 else { throw CommandError(message: "无法创建命令输出文件。") }
+        guard descriptor >= 0 else { throw CommandError(message: L10n.text("Could not create the command output file.")) }
         _ = fcntl(descriptor, F_SETFD, FD_CLOEXEC)
         output = FileHandle(fileDescriptor: descriptor, closeOnDealloc: true)
         unlink(template)
@@ -43,16 +43,16 @@ final class ToolProcess {
     }
 
     private func result(emptyResultExitCode: Int32?) throws -> String {
-        let command = process.executableURL?.lastPathComponent ?? "命令"
+        let command = process.executableURL?.lastPathComponent ?? L10n.text("Command")
         if completion.wait(timeout: .now() + 5) == .timedOut {
             if process.isRunning { kill(process.processIdentifier, SIGKILL) }
             process.waitUntilExit()
-            throw CommandError(message: "\(command) 超时，请检查设备或连接。")
+            throw CommandError(message: L10n.text("\(command) timed out. Check the device or connection."))
         }
         let message = diagnostics()
         if process.terminationStatus == emptyResultExitCode, message.isEmpty { return "" }
         guard process.terminationStatus == 0 else {
-            throw CommandError(message: message.isEmpty ? "\(command) 退出，状态 \(process.terminationStatus)。" : message)
+            throw CommandError(message: message.isEmpty ? L10n.text("\(command) exited with status \(process.terminationStatus).") : message)
         }
         return diagnostics(limit: 256 * 1024)
     }
@@ -75,7 +75,7 @@ struct DeviceTools {
     private let ideviceInfo = Self.locate("ideviceinfo")
     private let irecovery = Self.locate("irecovery")
 
-    private static func locate(_ tool: String) -> URL? {
+    static func locate(_ tool: String) -> URL? {
         let env = ProcessInfo.processInfo.environment
         let home = FileManager.default.homeDirectoryForCurrentUser
         let sdkTools = [env["ANDROID_HOME"], env["ANDROID_SDK_ROOT"], home.appendingPathComponent("Library/Android/sdk").path]
@@ -87,7 +87,7 @@ struct DeviceTools {
     }
 
     func android(_ arguments: [String]) async throws -> String {
-        guard let adb else { throw CommandError(message: "找不到 adb，请安装 Android SDK Platform-Tools。") }
+        guard let adb else { throw CommandError(message: L10n.text("adb was not found. Install Android SDK Platform-Tools.")) }
         return try await ToolProcess.run(adb, arguments)
     }
 
@@ -103,18 +103,28 @@ struct DeviceTools {
                 .map { $0.dropFirst("model:".count).replacingOccurrences(of: "_", with: " ") }
             let transport = columns.first { $0.hasPrefix("transport_id:") }
                 .map { String($0.dropFirst("transport_id:".count)) }
+            let id = DeviceID(platform: .android, serial: serial)
+            let type: AndroidConnection?
+            if serial.hasPrefix("emulator-") {
+                type = .emulator
+            } else if serial.contains("._adb-tls-connect._tcp") {
+                type = .wifi
+            } else if id.isAndroidEndpoint {
+                type = .network
+            } else if columns.dropFirst(2).contains(where: { $0.hasPrefix("usb:") || $0 == serial }) {
+                type = .usb
+            } else {
+                type = nil
+            }
             let connection: String
             switch state {
-            case "device":
-                if serial.hasPrefix("emulator-") { connection = "模拟器" }
-                else if DeviceID(platform: .android, serial: serial).isAndroidEndpoint { connection = "Wi-Fi" }
-                else { connection = "已连接" }
-            case "unauthorized": connection = "请在设备上授权 USB 调试"
-            case "offline": connection = "离线"
+            case "device": connection = type?.title ?? L10n.text("Connected")
+            case "unauthorized": connection = L10n.text("Authorize USB debugging on the device")
+            case "offline": connection = L10n.text("Offline")
             default: connection = String(state)
             }
-            return Device(id: DeviceID(platform: .android, serial: serial), name: model ?? serial,
-                          connection: connection, ready: state == "device", transport: transport)
+            return Device(id: id, name: model ?? serial, connection: connection, ready: state == "device",
+                          transport: transport, androidConnection: type)
         }
         let resolved = await withTaskGroup(of: (Int, Device).self) { group in
             for (index, device) in connections.enumerated() {
@@ -143,12 +153,12 @@ struct DeviceTools {
         let endpoint = device.adbAddress
         if device.ready, let stableID = await androidStableID(for: device) {
             return Device(id: stableID, name: device.name, connection: device.connection, ready: true,
-                          transport: device.transport, adbSerial: endpoint)
+                          transport: device.transport, adbSerial: endpoint, androidConnection: device.androidConnection)
         }
         return Device(id: DeviceID(platform: .android, serial: "pending:\(endpoint)"),
                       name: device.name,
-                      connection: device.ready ? "无法确认设备身份" : device.connection, ready: false,
-                      transport: device.transport, adbSerial: endpoint)
+                      connection: device.ready ? L10n.text("Could not verify device identity") : device.connection, ready: false,
+                      transport: device.transport, adbSerial: endpoint, androidConnection: device.androidConnection)
     }
 
     private func androidStableID(for device: Device) async -> DeviceID? {
@@ -173,9 +183,24 @@ struct DeviceTools {
         return value
     }
 
+    func deviceDetails(for device: Device) async -> (model: String?, version: String?) {
+        guard device.ready else { return (nil, nil) }
+        switch device.id.platform {
+        case .ios:
+            guard let connection = device.iosConnection else { return (nil, nil) }
+            async let model = iosValue("ProductType", serial: device.id.serial, isUSB: connection == .usb)
+            async let version = iosValue("ProductVersion", serial: device.id.serial, isUSB: connection == .usb)
+            return await (model, version)
+        case .android:
+            async let model = androidProperty("ro.product.model", device: device)
+            async let version = androidProperty("ro.build.version.release", device: device)
+            return await (model, version)
+        }
+    }
+
     func iosDevices(known: [Device]) async throws -> [Device] {
         guard let ideviceID, iproxy != nil else {
-            throw CommandError(message: "找不到 idevice_id 或 iproxy，请安装 libimobiledevice 和 libusbmuxd。")
+            throw CommandError(message: L10n.text("idevice_id or iproxy was not found. Install libimobiledevice and libusbmuxd."))
         }
         let output = try await ToolProcess.run(ideviceID, [])
         let connections = Self.iosConnections(output)
@@ -243,8 +268,8 @@ struct DeviceTools {
         return connections
     }
 
-    func startProxy(_ tunnel: Tunnel) throws -> ToolProcess {
-        guard let iproxy else { throw CommandError(message: "找不到 iproxy。") }
+    func startProxy(_ tunnel: DeviceTunnel) throws -> ToolProcess {
+        guard let iproxy else { throw CommandError(message: L10n.text("iproxy was not found.")) }
         return try ToolProcess(iproxy, ["-l", "-n", "-u", tunnel.device.serial, "-s", "127.0.0.1",
                                        "\(tunnel.macPort):\(tunnel.devicePort)"])
     }

@@ -6,11 +6,12 @@ struct MacPortOwnersButton: View {
     @State private var showsOwners = false
 
     var body: some View {
-        Button("查看占用进程…") { showsOwners = true }
+        Button("Show Listening Processes…") { showsOwners = true }
             .buttonStyle(.link)
             .font(.caption)
             .popover(isPresented: $showsOwners) {
                 MacPortOwnersPopover(port: port, onRelease: onRelease)
+                    .environment(\.locale, L10n.locale)
             }
     }
 }
@@ -26,13 +27,13 @@ private struct MacPortOwnersPopover: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text("Mac TCP 端口 \(String(port))").font(.headline)
+                Text("Mac TCP Port \(String(port))").font(.headline)
                 Spacer()
                 Button {
                     busy = true
                     Task { await refresh() }
                 } label: {
-                    Label("刷新进程", systemImage: "arrow.clockwise").labelStyle(.iconOnly)
+                    Label("Refresh Processes", systemImage: "arrow.clockwise").labelStyle(.iconOnly)
                 }
                 .buttonStyle(.borderless)
                 .disabled(busy)
@@ -40,7 +41,7 @@ private struct MacPortOwnersPopover: View {
             if busy {
                 ProgressView().controlSize(.small)
             } else if owners.isEmpty && message == nil {
-                Text("未找到此端口的可见监听进程。")
+                Text("No visible processes are listening on this port.")
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }
@@ -56,10 +57,10 @@ private struct MacPortOwnersPopover: View {
                     }
                     Spacer(minLength: 4)
                     if owner.canForceKill {
-                        Button("强制结束…", role: .destructive) { pending = owner }
+                        Button("Force Quit…", role: .destructive) { pending = owner }
                             .disabled(busy)
                     } else {
-                        Text("无法从此处结束")
+                        Text("Cannot Force Quit")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -72,17 +73,17 @@ private struct MacPortOwnersPopover: View {
         .padding(16)
         .frame(width: 370, alignment: .leading)
         .task(id: port) { await refresh() }
-        .alert("强制结束监听进程？", isPresented: Binding(
+        .alert("Force quit the listening process?", isPresented: Binding(
             get: { pending != nil },
             set: { if !$0 { pending = nil } }
         ), presenting: pending) { owner in
-            Button("强制结束", role: .destructive) {
+            Button("Force Quit", role: .destructive) {
                 busy = true
                 Task { await end(owner) }
             }
-            Button("取消", role: .cancel) {}
+            Button("Cancel", role: .cancel) {}
         } message: { owner in
-            Text("将向 \(owner.name)（PID \(String(owner.id))）发送 SIGKILL。未保存的数据可能丢失，该进程的其他连接也会中断。")
+            Text("SIGKILL will be sent to \(owner.name) (PID \(String(owner.id))). Unsaved data may be lost, and the process’s other connections will close.")
         }
     }
 
@@ -110,7 +111,7 @@ private struct MacPortOwnersPopover: View {
         for _ in 0..<10 {
             if (try? MacListener.checkAvailability(port: port)) != nil {
                 owners = []
-                message = "端口已释放。"
+                message = L10n.text("The port is now available.")
                 onRelease()
                 return
             }
@@ -118,7 +119,7 @@ private struct MacPortOwnersPopover: View {
         }
         await refresh()
         if message == nil {
-            message = "已发送 SIGKILL，端口仍被占用。"
+            message = L10n.text("SIGKILL was sent. The port is still in use.")
         }
     }
 }

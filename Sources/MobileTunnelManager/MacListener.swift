@@ -13,7 +13,7 @@ struct MacPortOwner: Identifiable {
     fileprivate var listeners: [Int32: String] = [:]
     fileprivate var addresses: Set<String> = []
 
-    var endpoints: String { addresses.sorted().joined(separator: "、") }
+    var endpoints: String { addresses.sorted().joined(separator: ", ") }
 
     var canForceKill: Bool {
         id > 1 && id != getpid() && identity?.user == geteuid() && !listeners.isEmpty
@@ -36,7 +36,7 @@ private struct ProcessIdentity: Equatable {
 enum MacListener {
     static func checkAvailability(port: Int) throws {
         guard let validPort = UInt16(exactly: port), validPort != 0 else {
-            throw CommandError(message: "Mac 监听端口须为 1–65535。")
+            throw CommandError(message: L10n.text("The Mac listen port must be between 1 and 65535."))
         }
         let descriptor = socket(AF_INET, SOCK_STREAM, 0)
         guard descriptor >= 0 else { throw systemError(port: port, code: errno) }
@@ -55,7 +55,7 @@ enum MacListener {
         guard result == 0 else {
             let code = errno
             if code == EADDRINUSE {
-                throw PortConflict(message: "Mac 监听端口 \(port) 已被占用。换一个端口，或等占用它的程序释放端口。")
+                throw PortConflict(message: L10n.text("Mac listen port \(String(port)) is in use. Choose another port or wait for the process to release it."))
             }
             throw systemError(port: port, code: code)
         }
@@ -63,7 +63,7 @@ enum MacListener {
 
     static func owners(of port: Int) async throws -> [MacPortOwner] {
         guard (1...65535).contains(port) else {
-            throw CommandError(message: "Mac 监听端口须为 1–65535。")
+            throw CommandError(message: L10n.text("The Mac listen port must be between 1 and 65535."))
         }
         let lsof = URL(fileURLWithPath: "/usr/sbin/lsof")
         let output = try await ToolProcess.run(lsof, [
@@ -91,7 +91,7 @@ enum MacListener {
                 let matches = isListening(pid: process, descriptor: descriptor, port: port)
                 let plausibleAddress = ["*:\(port)", "127.0.0.1:\(port)"].contains(String(value))
                 guard matches == true || (matches == nil && plausibleAddress) else { continue }
-                var owner = owners[process] ?? MacPortOwner(id: process, name: command.isEmpty ? "未知进程" : command,
+                var owner = owners[process] ?? MacPortOwner(id: process, name: command.isEmpty ? L10n.text("Unknown process") : command,
                                                            identity: ProcessIdentity.read(process))
                 let address = String(value)
                 owner.addresses.insert(address)
@@ -106,19 +106,19 @@ enum MacListener {
 
     static func forceKill(_ owner: MacPortOwner, port: Int) throws {
         guard owner.canForceKill else {
-            throw CommandError(message: "只能强制结束当前用户拥有、且能确认监听的其它进程。")
+            throw CommandError(message: L10n.text("You can only force quit other processes you own that are confirmed to be listening on this port."))
         }
         do {
             try checkAvailability(port: port)
-            throw CommandError(message: "端口已释放。")
+            throw CommandError(message: L10n.text("The port is now available."))
         } catch is PortConflict {
             guard owner.listeners.keys.contains(where: { isListening(pid: owner.id, descriptor: $0, port: port) == true }),
                   ProcessIdentity.read(owner.id) == owner.identity else {
-                throw CommandError(message: "进程或监听已变化，请刷新后重新选择。")
+                throw CommandError(message: L10n.text("The process or listener changed. Refresh the list and select it again."))
             }
             guard kill(owner.id, SIGKILL) == 0 else {
                 let code = errno
-                throw CommandError(message: "无法强制结束 \(owner.name)：\(String(cString: strerror(code)))")
+                throw CommandError(message: L10n.text("Could not force quit \(owner.name): \(String(cString: strerror(code)))"))
             }
         }
     }
@@ -137,6 +137,6 @@ enum MacListener {
     }
 
     private static func systemError(port: Int, code: Int32) -> CommandError {
-        CommandError(message: "无法检查 Mac 监听端口 \(port)：\(String(cString: strerror(code)))")
+        CommandError(message: L10n.text("Could not check Mac listen port \(String(port)): \(String(cString: strerror(code)))"))
     }
 }

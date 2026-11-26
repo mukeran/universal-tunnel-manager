@@ -1,0 +1,3868 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@  %@": {
+      "shouldTranslate": false
+    },
+    "%@ Copy": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 副本"
+          }
+        }
+      }
+    },
+    "%@ command could not start: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@命令无法启动：%@"
+          }
+        }
+      }
+    },
+    "%@ command exited with status %d.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@命令以状态码 %d 退出。"
+          }
+        }
+      }
+    },
+    "%@ command timed out after %lld seconds.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@命令在 %lld 秒后超时。"
+          }
+        }
+      }
+    },
+    "%@ exited with status %d.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 退出，状态 %d。"
+          }
+        }
+      }
+    },
+    "%@ on %@ is already in use by another ADB rule.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 的 %@ 已被另一条 ADB 规则占用。"
+          }
+        }
+      }
+    },
+    "%@ timed out. Check the device or connection.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 超时，请检查设备或连接。"
+          }
+        }
+      }
+    },
+    "%@ · %@": {
+      "shouldTranslate": false
+    },
+    "%@ · %@ · %@": {
+      "shouldTranslate": false
+    },
+    "%lld": {
+      "shouldTranslate": false
+    },
+    "-d -d -T 30": {
+      "shouldTranslate": false
+    },
+    "-p 2222 -J bastion": {
+      "shouldTranslate": false
+    },
+    "/path/to/file": {
+      "shouldTranslate": false
+    },
+    "8100": {
+      "shouldTranslate": false
+    },
+    "A blank field uses its placeholder default; hover a field for what it does. Connect Timeout is off unless set.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "留空的字段将使用占位符中的默认值；将鼠标悬停在字段上可查看其作用。连接超时未设置时不启用。"
+          }
+        }
+      }
+    },
+    "A local forward port is already in use.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "某个本地转发端口已被占用。"
+          }
+        }
+      }
+    },
+    "ADB Address": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ADB 地址"
+          }
+        }
+      }
+    },
+    "ADB Transport ID": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ADB 传输 ID"
+          }
+        }
+      }
+    },
+    "AVD Name": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AVD 名称"
+          }
+        }
+      }
+    },
+    "Active": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已建立"
+          }
+        }
+      }
+    },
+    "Add": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加"
+          }
+        }
+      }
+    },
+    "Add Device Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加设备转发"
+          }
+        }
+      }
+    },
+    "Add Port Mapping": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加端口映射"
+          }
+        }
+      }
+    },
+    "Add to %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加到 %@"
+          }
+        }
+      }
+    },
+    "Additional Options": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "附加选项"
+          }
+        }
+      }
+    },
+    "Address 1": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址 1"
+          }
+        }
+      }
+    },
+    "Address 1 → Address 2": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址 1 → 地址 2"
+          }
+        }
+      }
+    },
+    "Address 2": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址 2"
+          }
+        }
+      }
+    },
+    "Address 2 → Address 1": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址 2 → 地址 1"
+          }
+        }
+      }
+    },
+    "Address Options": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址选项"
+          }
+        }
+      }
+    },
+    "Address Type": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址类型"
+          }
+        }
+      }
+    },
+    "Adds -J <value>. Reaches the host through one or more bastion hosts, replacing a manual multi-hop ssh.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加 -J <值>。通过一个或多个堡垒机连接到主机，替代手动多跳 ssh。"
+          }
+        }
+      }
+    },
+    "Advanced": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高级"
+          }
+        }
+      }
+    },
+    "Advanced Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高级设置"
+          }
+        }
+      }
+    },
+    "After Connect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接后"
+          }
+        }
+      }
+    },
+    "After Disconnect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "断开后"
+          }
+        }
+      }
+    },
+    "Alias": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "别名"
+          }
+        }
+      }
+    },
+    "Aliases in ~/.ssh/config": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "~/.ssh/config 中的别名"
+          }
+        }
+      }
+    },
+    "Alive Count Max": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大保活次数"
+          }
+        }
+      }
+    },
+    "Alive Interval": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保活间隔"
+          }
+        }
+      }
+    },
+    "All Addresses": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部地址"
+          }
+        }
+      }
+    },
+    "Allocate an SSH terminal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为 SSH 分配终端"
+          }
+        }
+      }
+    },
+    "Allow address reuse": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许复用地址"
+          }
+        }
+      }
+    },
+    "Allow this app to launch at login in Login Items & Extensions.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在「登录项与扩展」中允许此应用登录时启动。"
+          }
+        }
+      }
+    },
+    "Another instance changed the configuration file. Reopen the app to load the latest configuration.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件已被其他实例修改。请重新打开应用以读取最新配置。"
+          }
+        }
+      }
+    },
+    "Append to Mac Output File": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加到 Mac 输出文件"
+          }
+        }
+      }
+    },
+    "Appended to the ssh command as-is, before the host. Split on spaces, so quoted values containing spaces won't survive.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按原样追加到 ssh 命令中的主机之前。按空格拆分，因此带引号且包含空格的值会被拆开。"
+          }
+        }
+      }
+    },
+    "Argument Format": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入方式"
+          }
+        }
+      }
+    },
+    "Arguments cannot contain NUL.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "参数中不能包含 NUL。"
+          }
+        }
+      }
+    },
+    "Authentication failed — check your key or identity file.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认证失败，请检查你的密钥或身份文件。"
+          }
+        }
+      }
+    },
+    "Authorize USB debugging on the device": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在设备上授权 USB 调试"
+          }
+        }
+      }
+    },
+    "Auto-connect on launch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动时自动连接"
+          }
+        }
+      }
+    },
+    "Before Connect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接前"
+          }
+        }
+      }
+    },
+    "Bidirectional": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "双向"
+          }
+        }
+      }
+    },
+    "Bidirectional Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "双向转发"
+          }
+        }
+      }
+    },
+    "Bind Address": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "绑定地址"
+          }
+        }
+      }
+    },
+    "CA File": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CA 文件"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "Cannot Force Quit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法从此处结束"
+          }
+        }
+      }
+    },
+    "Certificate": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "证书"
+          }
+        }
+      }
+    },
+    "Checking the Wi-Fi connection. Forwarding will start when the device is available.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在确认 Wi-Fi 连接，设备恢复后会启动转发。"
+          }
+        }
+      }
+    },
+    "Choose SSH Alias": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 SSH 别名"
+          }
+        }
+      }
+    },
+    "Choose an alias from SSH configuration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 SSH 配置别名"
+          }
+        }
+      }
+    },
+    "Choose an alias from ~/.ssh/config": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 ~/.ssh/config 中选择别名"
+          }
+        }
+      }
+    },
+    "Collapse Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收起分组"
+          }
+        }
+      }
+    },
+    "Command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令"
+          }
+        }
+      }
+    },
+    "Command Line Syntax": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令行语法"
+          }
+        }
+      }
+    },
+    "Command Preview": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预览命令"
+          }
+        }
+      }
+    },
+    "Commands run through /bin/sh. A failed Before Connect command prevents the connection from starting.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令通过 /bin/sh 执行。连接前命令失败时，该连接不会启动。"
+          }
+        }
+      }
+    },
+    "Complete the quotation or trailing backslash.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请补全引号或反斜杠。"
+          }
+        }
+      }
+    },
+    "Completed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已完成"
+          }
+        }
+      }
+    },
+    "Compress the data stream (-C). Can help on slow links; costs CPU.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩数据流（-C）。在慢速链路上可能有帮助，但会消耗 CPU。"
+          }
+        }
+      }
+    },
+    "Compression": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩"
+          }
+        }
+      }
+    },
+    "Configuration Mode": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置方式"
+          }
+        }
+      }
+    },
+    "Connect Timeout": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接超时"
+          }
+        }
+      }
+    },
+    "Connect and authorize a device to select it.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接并授权设备后即可选择。"
+          }
+        }
+      }
+    },
+    "Connected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已连接"
+          }
+        }
+      }
+    },
+    "Connecting...": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在连接…"
+          }
+        }
+      }
+    },
+    "Connection": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接"
+          }
+        }
+      }
+    },
+    "Connection Commands": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接命令"
+          }
+        }
+      }
+    },
+    "Connection Resilience": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接稳定性"
+          }
+        }
+      }
+    },
+    "Connection Status": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接状态"
+          }
+        }
+      }
+    },
+    "Connection Type": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接类型"
+          }
+        }
+      }
+    },
+    "Connection refused — the SSH server may be down or on another port.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连接被拒绝，SSH 服务器可能未运行或使用了其他端口。"
+          }
+        }
+      }
+    },
+    "Convert Form to Raw Arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将表单转为原始参数"
+          }
+        }
+      }
+    },
+    "Convert to Form": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转为表单"
+          }
+        }
+      }
+    },
+    "Copy to clipboard": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝到剪贴板"
+          }
+        }
+      }
+    },
+    "Could Not Export Configuration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法导出配置"
+          }
+        }
+      }
+    },
+    "Could Not Save Configuration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存配置"
+          }
+        }
+      }
+    },
+    "Could not change the tunnel configuration.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法修改转发配置。"
+          }
+        }
+      }
+    },
+    "Could not check Mac listen port %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法检查 Mac 监听端口 %@：%@"
+          }
+        }
+      }
+    },
+    "Could not create the command output file.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法创建命令输出文件。"
+          }
+        }
+      }
+    },
+    "Could not force quit %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法强制结束 %@：%@"
+          }
+        }
+      }
+    },
+    "Could not locate the sudo password prompt.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 sudo 密码提示程序。"
+          }
+        }
+      }
+    },
+    "Could not migrate %@: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法迁移 %@：%@"
+          }
+        }
+      }
+    },
+    "Could not open the output file: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法打开输出文件：%@"
+          }
+        }
+      }
+    },
+    "Could not read the tunnel configuration.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取转发配置。"
+          }
+        }
+      }
+    },
+    "Could not read the tunnel configuration: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取转发配置。%@"
+          }
+        }
+      }
+    },
+    "Could not save the group.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存分组。"
+          }
+        }
+      }
+    },
+    "Could not save the imported configuration.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存导入的配置。"
+          }
+        }
+      }
+    },
+    "Could not save the tunnel configuration: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存转发配置。%@"
+          }
+        }
+      }
+    },
+    "Could not verify device identity": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法确认设备身份"
+          }
+        }
+      }
+    },
+    "Couldn’t resolve the host name (DNS).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法解析主机名（DNS）。"
+          }
+        }
+      }
+    },
+    "Create a profile or move an existing profile into this group.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建 Profile，或将已有 Profile 移入此分组。"
+          }
+        }
+      }
+    },
+    "Current ADB Address": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前 ADB 地址"
+          }
+        }
+      }
+    },
+    "Custom Address": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义地址"
+          }
+        }
+      }
+    },
+    "Custom SSH command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义 SSH 命令"
+          }
+        }
+      }
+    },
+    "Custom SSH command isn’t an executable file: %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义 SSH 命令不是可执行文件：%@"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        }
+      }
+    },
+    "Delete Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除分组"
+          }
+        }
+      }
+    },
+    "Delete Group…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除分组…"
+          }
+        }
+      }
+    },
+    "Delete Profile…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除 Profile…"
+          }
+        }
+      }
+    },
+    "Delete group?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除分组？"
+          }
+        }
+      }
+    },
+    "Delete profile?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除 Profile？"
+          }
+        }
+      }
+    },
+    "Delete…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除…"
+          }
+        }
+      }
+    },
+    "Device": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备"
+          }
+        }
+      }
+    },
+    "Device :%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备 :%@"
+          }
+        }
+      }
+    },
+    "Device :%@ → Mac :%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备 :%@ → Mac :%@"
+          }
+        }
+      }
+    },
+    "Device Details": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备信息"
+          }
+        }
+      }
+    },
+    "Device Listen Port": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备监听端口"
+          }
+        }
+      }
+    },
+    "Device Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备 Profile"
+          }
+        }
+      }
+    },
+    "Device Status": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备状态"
+          }
+        }
+      }
+    },
+    "Device Target Port": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备目标端口"
+          }
+        }
+      }
+    },
+    "Device → Mac": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备 → Mac"
+          }
+        }
+      }
+    },
+    "Disconnected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未连接"
+          }
+        }
+      }
+    },
+    "Disconnected unexpectedly (ssh exit %d).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "意外断开（ssh 退出码 %d）。"
+          }
+        }
+      }
+    },
+    "Drop the connection after this many missed keepalive probes. Blank uses the default (%lld).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连续这么多次保活探测无响应后断开连接。留空则使用默认值（%lld）。"
+          }
+        }
+      }
+    },
+    "Duplicate Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制 Profile"
+          }
+        }
+      }
+    },
+    "Edit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑"
+          }
+        }
+      }
+    },
+    "Edit Device Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑设备转发"
+          }
+        }
+      }
+    },
+    "Edit…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑…"
+          }
+        }
+      }
+    },
+    "Empty Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分组为空"
+          }
+        }
+      }
+    },
+    "Emulator": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模拟器"
+          }
+        }
+      }
+    },
+    "Enable Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用分组"
+          }
+        }
+      }
+    },
+    "Enter a file or socket path.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请填写文件或套接字路径。"
+          }
+        }
+      }
+    },
+    "Enter a group name.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入分组名称。"
+          }
+        }
+      }
+    },
+    "Enter a host name or IP address.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入主机名或 IP 地址。"
+          }
+        }
+      }
+    },
+    "Enter a valid SSH host or configuration alias.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入有效的 SSH 主机或配置别名。"
+          }
+        }
+      }
+    },
+    "Enter a valid bind address.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入有效的绑定地址。"
+          }
+        }
+      }
+    },
+    "Enter a valid socat address.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入有效的 socat 地址。"
+          }
+        }
+      }
+    },
+    "Enter an absolute path on this Mac.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入 Mac 上的绝对文件路径。"
+          }
+        }
+      }
+    },
+    "Enter one socat command. Quote special characters that should be passed as arguments.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入单条 socat 命令。需要作为参数传递的特殊字符请用引号包住。"
+          }
+        }
+      }
+    },
+    "Enter options and addresses without the leading socat command. In one-argument-per-line mode, each line is passed as written.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "填写选项和地址，无需输入 socat。每行一个参数会原样传递。"
+          }
+        }
+      }
+    },
+    "Enter socat arguments. Use -hhh to view help.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请填写 socat 参数。可输入 -hhh 查看帮助。"
+          }
+        }
+      }
+    },
+    "Enter socat options and two addresses. The leading socat command is optional.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入 socat 选项和两个地址，可在开头加上 socat。"
+          }
+        }
+      }
+    },
+    "Enter your Mac account password to start this socat profile with administrator privileges.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入 Mac 账户密码，以管理员权限启动此 socat Profile。"
+          }
+        }
+      }
+    },
+    "Exit code %d. Waiting to retry.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出码 %d，等待重试"
+          }
+        }
+      }
+    },
+    "Expand Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "展开分组"
+          }
+        }
+      }
+    },
+    "Export Configuration…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导出配置…"
+          }
+        }
+      }
+    },
+    "Extra SSH options": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "额外 SSH 选项"
+          }
+        }
+      }
+    },
+    "Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "失败"
+          }
+        }
+      }
+    },
+    "File": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件"
+          }
+        }
+      }
+    },
+    "Fill Form": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "填充表单"
+          }
+        }
+      }
+    },
+    "Find socat automatically": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "默认查找 socat"
+          }
+        }
+      }
+    },
+    "Follow System": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
+          }
+        }
+      }
+    },
+    "For hosts recreated on the same address. Disables protection against a changed/spoofed host — use only on trusted networks.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "适用于在同一地址上重建的主机。这会关闭针对主机变更或伪造的保护，请仅在可信网络中使用。"
+          }
+        }
+      }
+    },
+    "For servers needing an interactive login (password, TOTP, Duo) the app can't answer: log in once in a terminal with  ssh -M -S <this path> -fN <host>  and answer the prompts there. While that master lives, this tunnel connects and auto-reconnects through it with no prompts; when it dies, reconnect it in the terminal.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对于需要交互式登录（密码、TOTP、Duo）而本应用无法应答的服务器：先在终端中用  ssh -M -S <此路径> -fN <主机>  登录一次，并在那里完成验证。只要该主连接存活，此隧道就会通过它连接并自动重连，无需任何提示；主连接断开后，请在终端中重新连接。"
+          }
+        }
+      }
+    },
+    "Force Quit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "强制结束"
+          }
+        }
+      }
+    },
+    "Force Quit…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "强制结束…"
+          }
+        }
+      }
+    },
+    "Force quit the listening process?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "强制结束监听进程？"
+          }
+        }
+      }
+    },
+    "Fork for each connection or datagram": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为每个连接或数据报创建进程"
+          }
+        }
+      }
+    },
+    "Form": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表单"
+          }
+        }
+      }
+    },
+    "Forward To": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发到"
+          }
+        }
+      }
+    },
+    "Forwarding Addresses": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发地址"
+          }
+        }
+      }
+    },
+    "Forwarding Direction": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发方向"
+          }
+        }
+      }
+    },
+    "Forwarding Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发失败"
+          }
+        }
+      }
+    },
+    "Forwarding disconnected. Waiting to retry.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发已断开，等待重试"
+          }
+        }
+      }
+    },
+    "Forwarding started": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发已启动"
+          }
+        }
+      }
+    },
+    "Forwarding stopped": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发已停止"
+          }
+        }
+      }
+    },
+    "Forwarding will resume when the device reconnects.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备重新接入后会恢复转发。"
+          }
+        }
+      }
+    },
+    "Full Address": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完整地址"
+          }
+        }
+      }
+    },
+    "Global Options": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全局选项"
+          }
+        }
+      }
+    },
+    "Group Actions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分组操作"
+          }
+        }
+      }
+    },
+    "Host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主机"
+          }
+        }
+      }
+    },
+    "Host key changed — enable “Skip host key check” if the host was recreated.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主机密钥已变更。如果主机是重建的，请启用“跳过主机密钥检查”。"
+          }
+        }
+      }
+    },
+    "Host unreachable — check the network or a firewall.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主机不可达，请检查网络或防火墙。"
+          }
+        }
+      }
+    },
+    "Identity File (optional)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "身份文件（可选）"
+          }
+        }
+      }
+    },
+    "If you enabled the system-level SOCKS proxy while the tunnel was up, this restores direct internet access.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果你在隧道连接期间启用了系统级 SOCKS 代理，此命令可恢复直接上网。"
+          }
+        }
+      }
+    },
+    "Import Command…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入命令…"
+          }
+        }
+      }
+    },
+    "Import Configuration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入配置"
+          }
+        }
+      }
+    },
+    "Import Configuration…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入配置…"
+          }
+        }
+      }
+    },
+    "Import socat Command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入 socat 命令"
+          }
+        }
+      }
+    },
+    "Imported %lld items. Review the configuration before starting any forwards.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已导入 %lld 项。启动前请检查配置。"
+          }
+        }
+      }
+    },
+    "Input File": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入文件"
+          }
+        }
+      }
+    },
+    "Invalid socat executable.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无效的 socat 可执行文件。"
+          }
+        }
+      }
+    },
+    "Jump host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳板机"
+          }
+        }
+      }
+    },
+    "Keeps the tunnel up through short outages instead of dropping immediately.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在短暂中断期间保持隧道连接，而不是立即断开。"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
+        }
+      }
+    },
+    "Launch at Login": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录时自动启动"
+          }
+        }
+      }
+    },
+    "Leave blank to show output in the log": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "留空时显示在日志中"
+          }
+        }
+      }
+    },
+    "Legacy ADB Address": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "旧版 ADB 地址"
+          }
+        }
+      }
+    },
+    "Line to send to stdin": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送一行到 stdin"
+          }
+        }
+      }
+    },
+    "Local": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本机"
+          }
+        }
+      }
+    },
+    "Local Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地转发"
+          }
+        }
+      }
+    },
+    "Local port %@ is also used by %@. Only one tunnel can bind a port at a time.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地端口 %1$@ 也被 %2$@ 使用。同一端口同一时间只能由一个隧道绑定。"
+          }
+        }
+      }
+    },
+    "Local port %lld is already in use by %@. Only one tunnel can bind it at a time.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地端口 %1$lld 已被 %2$@ 占用。同一时间只能有一个隧道绑定它。"
+          }
+        }
+      }
+    },
+    "Local port %lld is already in use. Only one tunnel can bind it at a time.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地端口 %lld 已被占用。同一时间只能有一个隧道绑定它。"
+          }
+        }
+      }
+    },
+    "Local · %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本机 · %@"
+          }
+        }
+      }
+    },
+    "Mac :%@ → Device :%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac :%@ → 设备 :%@"
+          }
+        }
+      }
+    },
+    "Mac Input File": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 输入文件"
+          }
+        }
+      }
+    },
+    "Mac Listen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 监听"
+          }
+        }
+      }
+    },
+    "Mac Listen Port": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 监听端口"
+          }
+        }
+      }
+    },
+    "Mac TCP Port %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac TCP 端口 %@"
+          }
+        }
+      }
+    },
+    "Mac TCP port %@ is in use": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac TCP 端口 %@ 已被占用"
+          }
+        }
+      }
+    },
+    "Mac Target": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 目标"
+          }
+        }
+      }
+    },
+    "Mac Target Port": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 目标端口"
+          }
+        }
+      }
+    },
+    "Mac listen port %@ is in use. Choose another port or wait for the process to release it.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 监听端口 %@ 已被占用。换一个端口，或等占用它的程序释放端口。"
+          }
+        }
+      }
+    },
+    "Mac → Device": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac → 设备"
+          }
+        }
+      }
+    },
+    "Manual Input": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动输入"
+          }
+        }
+      }
+    },
+    "Mode": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模式"
+          }
+        }
+      }
+    },
+    "Model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "型号"
+          }
+        }
+      }
+    },
+    "Move Down": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下移"
+          }
+        }
+      }
+    },
+    "Move Group Down": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下移分组"
+          }
+        }
+      }
+    },
+    "Move Group Up": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上移分组"
+          }
+        }
+      }
+    },
+    "Move Up": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上移"
+          }
+        }
+      }
+    },
+    "Move to Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移到分组"
+          }
+        }
+      }
+    },
+    "Move to Ungrouped": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移到未分组"
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名称"
+          }
+        }
+      }
+    },
+    "Network ADB": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网络 ADB"
+          }
+        }
+      }
+    },
+    "New": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建"
+          }
+        }
+      }
+    },
+    "New Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建转发"
+          }
+        }
+      }
+    },
+    "New Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建分组"
+          }
+        }
+      }
+    },
+    "New Group…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建分组…"
+          }
+        }
+      }
+    },
+    "New Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建 Profile"
+          }
+        }
+      }
+    },
+    "No Input": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无输入"
+          }
+        }
+      }
+    },
+    "No aliases found in ~/.ssh/config": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 ~/.ssh/config 中未找到别名"
+          }
+        }
+      }
+    },
+    "No devices connected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未连接设备"
+          }
+        }
+      }
+    },
+    "No executable socat was found. Install it with brew install socat or enter an absolute path.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到可执行的 socat。可用 brew install socat 安装，或填写绝对路径。"
+          }
+        }
+      }
+    },
+    "No output yet": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无输出"
+          }
+        }
+      }
+    },
+    "No profiles yet": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有 Profile"
+          }
+        }
+      }
+    },
+    "No visible processes are listening on this port.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到此端口的可见监听进程。"
+          }
+        }
+      }
+    },
+    "Not reported": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未报告"
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
+          }
+        }
+      }
+    },
+    "OS Version": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统版本"
+          }
+        }
+      }
+    },
+    "Offline": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "离线"
+          }
+        }
+      }
+    },
+    "On This Mac": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在本机执行"
+          }
+        }
+      }
+    },
+    "On the SSH Host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 SSH 主机执行"
+          }
+        }
+      }
+    },
+    "One Argument per Line": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每行一个参数"
+          }
+        }
+      }
+    },
+    "Open Login Items Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开登录项设置"
+          }
+        }
+      }
+    },
+    "Open Tunnel Manager": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开转发管理"
+          }
+        }
+      }
+    },
+    "Option %@ requires an argument.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选项 %@ 缺少参数。"
+          }
+        }
+      }
+    },
+    "Optional": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可选"
+          }
+        }
+      }
+    },
+    "Optional — routes the login through a bastion to reach the host. Only a login path, not the data flow; -L/-R targets still resolve from the final host. A jump-host-specific key/user goes in ~/.ssh/config. Format: user@host[:port][,user@host2…]": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可选。通过堡垒机路由登录以到达主机。这只是登录路径，不是数据通路；-L/-R 的目标仍从最终主机解析。跳板机专用的密钥或用户请写在 ~/.ssh/config 中。格式：user@host[:port][,user@host2…]"
+          }
+        }
+      }
+    },
+    "Output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输出"
+          }
+        }
+      }
+    },
+    "Over SSH": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通过 SSH"
+          }
+        }
+      }
+    },
+    "PID %@ · %@": {
+      "shouldTranslate": false
+    },
+    "PTY,link=/tmp/serial": {
+      "shouldTranslate": false
+    },
+    "Password": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码"
+          }
+        }
+      }
+    },
+    "Paste a complete command or its options and addresses": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴完整命令或选项与地址"
+          }
+        }
+      }
+    },
+    "Path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "路径"
+          }
+        }
+      }
+    },
+    "Platform": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平台"
+          }
+        }
+      }
+    },
+    "Play a sound when a forward connects or disconnects": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发连接或断开时播放声音"
+          }
+        }
+      }
+    },
+    "Port": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "端口"
+          }
+        }
+      }
+    },
+    "Port Conflict": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "端口冲突"
+          }
+        }
+      }
+    },
+    "Port Forwarding": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "端口转发"
+          }
+        }
+      }
+    },
+    "Preferences": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "偏好设置"
+          }
+        }
+      }
+    },
+    "Private Key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "私钥"
+          }
+        }
+      }
+    },
+    "Process exited (%d)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "进程已退出（%d）"
+          }
+        }
+      }
+    },
+    "Profile Actions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profile 操作"
+          }
+        }
+      }
+    },
+    "Profile Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profile 分组"
+          }
+        }
+      }
+    },
+    "Profiles in “%@” will move to Ungrouped.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「%@」中的 Profile 会移到未分组。"
+          }
+        }
+      }
+    },
+    "Profiles: %lld": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个 Profile"
+          }
+        }
+      }
+    },
+    "Proxy": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理"
+          }
+        }
+      }
+    },
+    "Quit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出"
+          }
+        }
+      }
+    },
+    "Quit Universal Tunnel Manager": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出 Universal Tunnel Manager"
+          }
+        }
+      }
+    },
+    "Raw Arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原始参数"
+          }
+        }
+      }
+    },
+    "Reading device details…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在读取设备详情…"
+          }
+        }
+      }
+    },
+    "Refresh Devices": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新设备"
+          }
+        }
+      }
+    },
+    "Refresh Processes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新进程"
+          }
+        }
+      }
+    },
+    "Refresh aliases": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新别名"
+          }
+        }
+      }
+    },
+    "Remote Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "远程转发"
+          }
+        }
+      }
+    },
+    "Remote · %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "远端 · %@"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除"
+          }
+        }
+      }
+    },
+    "Rename…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名…"
+          }
+        }
+      }
+    },
+    "Reopen Universal Tunnel Manager to apply the language change.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新打开 Universal Tunnel Manager 后应用语言更改。"
+          }
+        }
+      }
+    },
+    "Replace variables and command substitutions with literal values before importing.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请将变量或命令替换改为具体值后再导入。"
+          }
+        }
+      }
+    },
+    "Replaces /usr/bin/ssh. First word is the executable, the rest lead the arguments. Only -N, the port forwards, Extra SSH options, and the host are passed — identity, port, and the app's OpenSSH -o options are skipped, since a non-OpenSSH client may reject them.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替代 /usr/bin/ssh。第一个词是可执行文件，其余部分作为参数的开头。只传递 -N、端口转发、额外 SSH 选项和主机；身份文件、端口以及本应用的 OpenSSH -o 选项会被跳过，因为非 OpenSSH 客户端可能不接受它们。"
+          }
+        }
+      }
+    },
+    "Restore previously enabled forwards on launch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动应用时恢复上次启用的转发"
+          }
+        }
+      }
+    },
+    "Retry after an unexpected exit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "异常退出后重试"
+          }
+        }
+      }
+    },
+    "Reuse existing SSH connection": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复用现有 SSH 连接"
+          }
+        }
+      }
+    },
+    "Reverse of a local forward: the server listens on the Remote address and sends connections back to the Local port on this Mac. Set the Remote host to 0.0.0.0 (and enable GatewayPorts on the server) to accept connections from beyond the server itself.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "与本地转发方向相反：服务器在远程地址上监听，并将连接转回本 Mac 的本地端口。将远程主机设为 0.0.0.0（并在服务器上启用 GatewayPorts），即可接受来自服务器以外的连接。"
+          }
+        }
+      }
+    },
+    "Run": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行"
+          }
+        }
+      }
+    },
+    "Run Command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行命令"
+          }
+        }
+      }
+    },
+    "Run On": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行位置"
+          }
+        }
+      }
+    },
+    "Run socat with sudo": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 sudo 运行 socat"
+          }
+        }
+      }
+    },
+    "Run with sudo": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 sudo 运行"
+          }
+        }
+      }
+    },
+    "Running": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行中"
+          }
+        }
+      }
+    },
+    "Runs this instead of /usr/bin/ssh — any client that accepts OpenSSH-style -N/-L/-R/-D flags works (Teleport's tsh ssh, cloud CLI ssh wrappers, …). Passes only -N, the forwards, Extra SSH options, and the host — add anything else your command supports to Extra SSH options. Auth prompts can't be answered here, so log in (e.g. tsh login) in a terminal first.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用它代替 /usr/bin/ssh 运行，任何接受 OpenSSH 风格 -N/-L/-R/-D 参数的客户端都可以（Teleport 的 tsh ssh、云平台 CLI 的 ssh 封装等）。只传递 -N、转发规则、额外 SSH 选项和主机；命令支持的其他参数请添加到额外 SSH 选项中。这里无法应答认证提示，请先在终端中登录（例如 tsh login）。"
+          }
+        }
+      }
+    },
+    "SIGKILL was sent. The port is still in use.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已发送 SIGKILL，端口仍被占用。"
+          }
+        }
+      }
+    },
+    "SIGKILL will be sent to %@ (PID %@). Unsaved data may be lost, and the process’s other connections will close.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将向 %@（PID %@）发送 SIGKILL。未保存的数据可能丢失，该进程的其他连接也会中断。"
+          }
+        }
+      }
+    },
+    "SOCKS Listen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SOCKS 监听"
+          }
+        }
+      }
+    },
+    "SOCKS Proxy": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SOCKS 代理"
+          }
+        }
+      }
+    },
+    "SSH Alias": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 别名"
+          }
+        }
+      }
+    },
+    "SSH Command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 命令"
+          }
+        }
+      }
+    },
+    "SSH Host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 主机"
+          }
+        }
+      }
+    },
+    "SSH Listen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 监听"
+          }
+        }
+      }
+    },
+    "SSH Options": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 选项"
+          }
+        }
+      }
+    },
+    "SSH Port": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 端口"
+          }
+        }
+      }
+    },
+    "SSH Profile": {
+      "shouldTranslate": false
+    },
+    "SSH Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 设置"
+          }
+        }
+      }
+    },
+    "SSH Target": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 目标"
+          }
+        }
+      }
+    },
+    "SSH alias or user@host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 别名或 user@host"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "Seconds between keepalive probes that detect a dead connection. Blank uses the default (%lld).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用于检测失效连接的保活探测间隔（秒）。留空则使用默认值（%lld）。"
+          }
+        }
+      }
+    },
+    "Seconds ssh waits to establish the connection before giving up. Blank = wait indefinitely.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ssh 放弃前等待建立连接的秒数。留空表示无限等待。"
+          }
+        }
+      }
+    },
+    "Select a Device": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择设备"
+          }
+        }
+      }
+    },
+    "Select a device and enter valid ports.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请选择设备并填写有效的端口。"
+          }
+        }
+      }
+    },
+    "Send": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送"
+          }
+        }
+      }
+    },
+    "Send EOF": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送 EOF"
+          }
+        }
+      }
+    },
+    "Serial Number": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "序列号"
+          }
+        }
+      }
+    },
+    "Server listens on %@:%@ → %@:%@ on this Mac": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务器监听 %@:%@ → 此 Mac 的 %@:%@"
+          }
+        }
+      }
+    },
+    "Sets -o ControlPath=<value>. The forward attaches to the master connection behind this socket instead of authenticating itself. The app never creates a master; without a live one, connecting fails with a visible reason.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 -o ControlPath=<值>。转发会附加到该套接字背后的主连接上，而不是自行认证。本应用从不创建主连接；如果没有存活的主连接，连接会失败并显示原因。"
+          }
+        }
+      }
+    },
+    "Sets StrictHostKeyChecking=no and UserKnownHostsFile=/dev/null.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 StrictHostKeyChecking=no 和 UserKnownHostsFile=/dev/null。"
+          }
+        }
+      }
+    },
+    "Sets TCPKeepAlive=no, so a short outage doesn't tear the connection down at the TCP layer; the Alive Interval probes above handle liveness instead.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 TCPKeepAlive=no，短暂中断不会在 TCP 层断开连接，改由上面的保活间隔探测来判断连接是否存活。"
+          }
+        }
+      }
+    },
+    "Show Device Details": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看设备信息"
+          }
+        }
+      }
+    },
+    "Show Listening Processes…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看占用进程…"
+          }
+        }
+      }
+    },
+    "Show notifications when a forward connects or disconnects": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发连接或断开时显示通知"
+          }
+        }
+      }
+    },
+    "Skip host key check": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳过主机密钥检查"
+          }
+        }
+      }
+    },
+    "Some ADB forwards could not be stopped": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "部分 ADB 转发未能关闭"
+          }
+        }
+      }
+    },
+    "Standard Input": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标准输入"
+          }
+        }
+      }
+    },
+    "Standard Input / Output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标准输入 / 输出"
+          }
+        }
+      }
+    },
+    "Start when the app opens": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开应用时启动"
+          }
+        }
+      }
+    },
+    "Starting": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在启动"
+          }
+        }
+      }
+    },
+    "Starting manually can prompt for your Mac password. Automatic starts and retries use non-interactive sudo.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动启动时可能需要输入 Mac 密码。自动启动和重试使用非交互式 sudo。"
+          }
+        }
+      }
+    },
+    "Stopped": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停止"
+          }
+        }
+      }
+    },
+    "Stopping": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在停止"
+          }
+        }
+      }
+    },
+    "Survive brief network drops": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "容忍短暂断网"
+          }
+        }
+      }
+    },
+    "Sys off": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭代理"
+          }
+        }
+      }
+    },
+    "Sys on": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开启代理"
+          }
+        }
+      }
+    },
+    "Sys on routes all of this Mac's traffic through the proxy (%@ is your current network service); Sys off restores it. Run them in a terminal; needs an admin account. Sys off stays shown here while the tunnel is down.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「开启代理」将此 Mac 的系统流量通过代理转发（当前网络服务为 %@）。「关闭代理」可恢复直连，隧道断开时仍会显示。请使用管理员账户在终端运行这些命令。"
+          }
+        }
+      }
+    },
+    "TCP Connect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TCP 连接"
+          }
+        }
+      }
+    },
+    "TCP Listen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TCP 监听"
+          }
+        }
+      }
+    },
+    "TCP port range: 1–65535": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TCP 端口范围 1–65535"
+          }
+        }
+      }
+    },
+    "TLS Connect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TLS 连接"
+          }
+        }
+      }
+    },
+    "TLS Listen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TLS 监听"
+          }
+        }
+      }
+    },
+    "Target Host": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目标主机"
+          }
+        }
+      }
+    },
+    "The Mac listen port must be between 1 and 65535.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 监听端口须为 1–65535。"
+          }
+        }
+      }
+    },
+    "The SSH host must allow sudo to run socat without prompting.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSH 主机必须允许 sudo 无需密码提示即可运行 socat。"
+          }
+        }
+      }
+    },
+    "The address cannot contain NUL.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地址不能包含 NUL。"
+          }
+        }
+      }
+    },
+    "The configuration contains duplicate profiles or invalid group members.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置包含重复的 Profile 或无效的分组成员。"
+          }
+        }
+      }
+    },
+    "The configured ports or forwarding direction are invalid.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置中的端口或转发方向无效。"
+          }
+        }
+      }
+    },
+    "The device is offline. This forward will be checked and stopped when the device reconnects.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备离线，重新接入后会核对并停止这条转发。"
+          }
+        }
+      }
+    },
+    "The port is now available.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "端口已释放。"
+          }
+        }
+      }
+    },
+    "The port must be between 1 and 65535.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "端口须为 1–65535。"
+          }
+        }
+      }
+    },
+    "The process or listener changed. Refresh the list and select it again.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "进程或监听已变化，请刷新后重新选择。"
+          }
+        }
+      }
+    },
+    "The server couldn’t bind the remote-forward port — it may already be in use there (or needs root for a port below 1024).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务器无法绑定远程转发端口，该端口可能已在服务器上被占用（或者 1024 以下的端口需要 root 权限）。"
+          }
+        }
+      }
+    },
+    "The server refused the port forward.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务器拒绝了端口转发。"
+          }
+        }
+      }
+    },
+    "The socat options -u and -U cannot be used together.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 的 -u 和 -U 不能同时使用。"
+          }
+        }
+      }
+    },
+    "There are no new profiles or groups to import.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有新的 Profile 或分组可导入。"
+          }
+        }
+      }
+    },
+    "This command cannot be converted without changes. Use raw arguments.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这条命令无法原样转换，请使用原始参数。"
+          }
+        }
+      }
+    },
+    "This legacy rule only contains an ADB address. Add the rule again for a verified device.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "旧规则只保存了 ADB 地址。请在确认身份的设备下重新添加这条规则。"
+          }
+        }
+      }
+    },
+    "This profile cannot be edited right now. Check whether it is running.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前无法编辑此 Profile。请检查运行状态。"
+          }
+        }
+      }
+    },
+    "This version of the app cannot read configuration version %lld.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此版本的应用无法读取配置版本 %lld。"
+          }
+        }
+      }
+    },
+    "Transfer Direction": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "传输方向"
+          }
+        }
+      }
+    },
+    "Type": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "类型"
+          }
+        }
+      }
+    },
+    "UDP Connect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UDP 连接"
+          }
+        }
+      }
+    },
+    "UDP Receive and Reply": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UDP 接收与回复"
+          }
+        }
+      }
+    },
+    "Under Open at Login, click + and select %@.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在「登录时打开」中点「＋」，选择 %@。"
+          }
+        }
+      }
+    },
+    "Under Open at Login, select this app and click − to remove it.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在「登录时打开」中选中此应用，再点「－」移除。"
+          }
+        }
+      }
+    },
+    "Ungrouped": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未分组"
+          }
+        }
+      }
+    },
+    "Universal Tunnel Manager": {
+      "shouldTranslate": false
+    },
+    "Unix Socket Connect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unix 套接字连接"
+          }
+        }
+      }
+    },
+    "Unix Socket Listen": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unix 套接字监听"
+          }
+        }
+      }
+    },
+    "Unknown process": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未知进程"
+          }
+        }
+      }
+    },
+    "Unnamed Group": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未命名分组"
+          }
+        }
+      }
+    },
+    "Untitled": {
+      "comment": "Placeholder for a tunnel saved without a name",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未命名"
+          }
+        }
+      }
+    },
+    "Usage": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用法"
+          }
+        }
+      }
+    },
+    "Use sudo before the socat command. Set its arguments after socat.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请将 sudo 放在 socat 前面，并将 socat 参数放在 socat 后面。"
+          }
+        }
+      }
+    },
+    "Waiting for Device": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待设备"
+          }
+        }
+      }
+    },
+    "Waiting to Retry": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待重试"
+          }
+        }
+      }
+    },
+    "When the devices reconnect, use adb to inspect and remove the remaining rules.\n\n%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以在设备恢复连接后通过 adb 检查并移除剩余规则。\n\n%@"
+          }
+        }
+      }
+    },
+    "You can only force quit other processes you own that are confirmed to be listening on this port.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只能强制结束当前用户拥有、且能确认监听的其它进程。"
+          }
+        }
+      }
+    },
+    "adb was not found. Install Android SDK Platform-Tools.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 adb，请安装 Android SDK Platform-Tools。"
+          }
+        }
+      }
+    },
+    "connect-timeout=5": {
+      "shouldTranslate": false
+    },
+    "e.g. -o ConnectTimeout=5": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如 -o ConnectTimeout=5"
+          }
+        }
+      }
+    },
+    "e.g. /opt/homebrew/bin/tsh ssh": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如 /opt/homebrew/bin/tsh ssh"
+          }
+        }
+      }
+    },
+    "e.g. bastion.example.com": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如 bastion.example.com"
+          }
+        }
+      }
+    },
+    "e.g. ~/.ssh/master-myhost.sock": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如 ~/.ssh/master-myhost.sock"
+          }
+        }
+      }
+    },
+    "iOS or Android": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS 或 Android"
+          }
+        }
+      }
+    },
+    "idevice_id or iproxy was not found. Install libimobiledevice and libusbmuxd.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 idevice_id 或 iproxy，请安装 libimobiledevice 和 libusbmuxd。"
+          }
+        }
+      }
+    },
+    "iproxy exited and will retry automatically.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iproxy 已退出，将自动重试。"
+          }
+        }
+      }
+    },
+    "iproxy failed to start. Check whether the Mac port is already in use.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iproxy 启动失败，请检查 Mac 端口是否被占用。"
+          }
+        }
+      }
+    },
+    "iproxy was not found.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到 iproxy。"
+          }
+        }
+      }
+    },
+    "my-server": {
+      "shouldTranslate": false
+    },
+    "off": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭"
+          }
+        }
+      }
+    },
+    "sec": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "秒"
+          }
+        }
+      }
+    },
+    "socat Arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 参数"
+          }
+        }
+      }
+    },
+    "socat Command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 命令"
+          }
+        }
+      }
+    },
+    "socat Executable": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 可执行文件"
+          }
+        }
+      }
+    },
+    "socat Help": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 帮助"
+          }
+        }
+      }
+    },
+    "socat Options": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 选项"
+          }
+        }
+      }
+    },
+    "socat Output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 输出"
+          }
+        }
+      }
+    },
+    "socat Profile": {
+      "shouldTranslate": false
+    },
+    "socat Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "socat 设置"
+          }
+        }
+      }
+    },
+    "ssh flags the UI doesn't cover, space-separated, e.g. -o ConnectTimeout=5 -o Foo=bar.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "界面未涵盖的 ssh 参数，以空格分隔，例如 -o ConnectTimeout=5 -o Foo=bar。"
+          }
+        }
+      }
+    },
+    "user@server.com": {
+      "shouldTranslate": false
+    },
+    "~/.ssh/id_rsa": {
+      "shouldTranslate": false
+    }
+  },
+  "version": "1.0"
+}

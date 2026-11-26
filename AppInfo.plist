@@ -3,25 +3,30 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleDevelopmentRegion</key>
-    <string>zh-Hans</string>
+    <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>Mobile Tunnel Manager</string>
+    <string>Universal Tunnel Manager</string>
     <key>CFBundleExecutable</key>
-    <string>MobileTunnelManager</string>
+    <string>UniversalTunnelManager</string>
     <key>CFBundleIdentifier</key>
-    <string>local.mobile-tunnel-manager</string>
+    <string>codes.var.tweak.utm</string>
     <key>CFBundleIconFile</key>
     <string>AppIcon</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>zh-Hans</string>
+    </array>
     <key>CFBundleName</key>
-    <string>Mobile Tunnel Manager</string>
+    <string>Universal Tunnel Manager</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>0.1.1</string>
+    <string>0.2.0</string>
     <key>CFBundleVersion</key>
-    <string>2</string>
+    <string>3</string>
     <key>LSMinimumSystemVersion</key>
     <string>14.0</string>
     <key>LSUIElement</key>

@@ -2,7 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "MobileTunnelManager",
+    name: "UniversalTunnelManager",
     platforms: [.macOS(.v14)],
-    targets: [.executableTarget(name: "MobileTunnelManager")]
+    targets: [
+        .target(name: "TunnelUI"),
+        .executableTarget(name: "UniversalTunnelManager", dependencies: ["TunnelUI"],
+                          path: "Sources", exclude: ["TunnelUI"])
+    ]
 )

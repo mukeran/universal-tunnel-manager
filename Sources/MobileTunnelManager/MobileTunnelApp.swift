@@ -1,59 +1,52 @@
 import AppKit
 import SwiftUI
+import UserNotifications
 
 @main
-struct MobileTunnelApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) private var app
-    @Environment(\.openWindow) private var openWindow
-
-    var body: some Scene {
-        Window("Mobile Tunnel Manager", id: "manager") {
-            ManagerView(manager: app.manager)
-                .frame(minWidth: 720, minHeight: 440)
-                .background(ManagerWindowAttachment(app: app, openWindow: openWindow))
+enum UniversalTunnelMain {
+    @MainActor
+    static func main() {
+        if SocatAskPass.isRequested {
+            SocatAskPass.prompt()
+        } else {
+            UniversalTunnelApp.main()
         }
-        .defaultSize(width: 840, height: 520)
-
-        MenuBarExtra {
-            TunnelMenuView(manager: app.manager) {
-                app.showManager(using: openWindow)
-            }
-        } label: {
-            Image(nsImage: MobileTunnelIcon.menuBar)
-                .accessibilityLabel("Mobile Tunnel Manager")
-        }
-        .menuBarExtraStyle(.window)
     }
 }
 
-private enum MobileTunnelIcon {
-    static let menuBar: NSImage = {
-        let image = NSImage(size: NSSize(width: 19, height: 18), flipped: false) { _ in
-            drawGlyph(color: .black)
-            return true
-        }
-        image.isTemplate = true
-        return image
-    }()
+struct UniversalTunnelApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var app
+    @Environment(\.openWindow) private var openWindow
+    @State private var selection: TunnelSelection?
+    @State private var newRequest = 0
 
-    private static func drawGlyph(color: NSColor) {
-        let phone = NSBezierPath(roundedRect: NSRect(x: 2.25, y: 1.75, width: 9, height: 14.5),
-                                 xRadius: 2, yRadius: 2)
-        let arrow = NSBezierPath()
-        arrow.move(to: NSPoint(x: 6.5, y: 9))
-        arrow.line(to: NSPoint(x: 17, y: 9))
-        arrow.move(to: NSPoint(x: 14, y: 12))
-        arrow.line(to: NSPoint(x: 17, y: 9))
-        arrow.line(to: NSPoint(x: 14, y: 6))
-        let home = NSBezierPath(ovalIn: NSRect(x: 6, y: 4, width: 1.5, height: 1.5))
-        color.set()
-        for path in [phone, arrow] {
-            path.lineWidth = 1.45
-            path.lineCapStyle = .round
-            path.lineJoinStyle = .round
-            path.stroke()
+    var body: some Scene {
+        Window("Universal Tunnel Manager", id: "manager") {
+            UnifiedManagerView(controller: app.controller, selection: $selection, newRequest: newRequest)
+                .frame(minWidth: 720, minHeight: 440)
+                .toolbarBackground(.hidden, for: .windowToolbar)
+                .background(ManagerWindowAttachment(app: app, openWindow: openWindow))
+                .environment(\.locale, L10n.locale)
         }
-        home.fill()
+        .windowStyle(.hiddenTitleBar)
+        .defaultSize(width: 860, height: 550)
+        .commands {
+            CommandGroup(replacing: .newItem) {
+                Button(L10n.text("New Forward")) { newRequest += 1 }.keyboardShortcut("n")
+            }
+        }
+
+        MenuBarExtra {
+            UniversalMenu(controller: app.controller) {
+                app.showManager(using: openWindow)
+            }
+            .background(MenuBarPanelSizer())
+            .environment(\.locale, L10n.locale)
+        } label: {
+            Image(nsImage: TunnelIcon.menuBar)
+                .accessibilityLabel("Universal Tunnel Manager")
+        }
+        .menuBarExtraStyle(.window)
     }
 }
 
@@ -81,14 +74,15 @@ private struct ManagerWindowAttachment: NSViewRepresentable {
 }
 
 @MainActor
-final class AppDelegate: NSObject, NSApplicationDelegate {
-    let manager = TunnelManager()
+final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
+    let controller = TunnelController()
     var openManagerWindow: OpenWindowAction?
     private weak var managerWindow: NSWindow?
     private var isExiting = false
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        manager.startMonitoring()
+        UNUserNotificationCenter.current().delegate = self
+        controller.start()
     }
 
     func attachManagerWindow(_ window: NSWindow) {
@@ -141,16 +135,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         guard !isExiting else { return .terminateLater }
         isExiting = true
         Task {
-            let remaining = await manager.shutdown()
+            let remaining = await controller.shutdown()
             if !remaining.isEmpty {
                 let alert = NSAlert()
-                alert.messageText = "部分 ADB 转发未能关闭"
-                alert.informativeText = remaining.joined(separator: "、") + "。可以在设备恢复连接后通过 adb 检查并移除剩余规则。"
-                alert.addButton(withTitle: "退出")
+                alert.messageText = L10n.text("Some ADB forwards could not be stopped")
+                let rules = remaining.joined(separator: ", ")
+                alert.informativeText = L10n.text("When the devices reconnect, use adb to inspect and remove the remaining rules.\n\n\(rules)")
+                alert.addButton(withTitle: L10n.text("Quit"))
                 alert.runModal()
             }
             sender.reply(toApplicationShouldTerminate: true)
         }
         return .terminateLater
+    }
+
+    nonisolated func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,
+                                           withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .list])
     }
 }
