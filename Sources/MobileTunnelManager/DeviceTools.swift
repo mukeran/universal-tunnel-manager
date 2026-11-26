@@ -91,9 +91,9 @@ struct DeviceTools {
         return try await ToolProcess.run(adb, arguments)
     }
 
-    func androidDevices() async throws -> [Device] {
+    func androidDevices(known: [Device]) async throws -> [Device] {
         let output = try await android(["devices", "-l"])
-        return output.split(whereSeparator: \.isNewline).compactMap { line in
+        let connections: [Device] = output.split(whereSeparator: \.isNewline).compactMap { line in
             let columns = line.split(whereSeparator: \.isWhitespace)
             guard columns.count >= 2, let state = columns.dropFirst().first,
                   ["device", "offline", "unauthorized", "authorizing", "recovery", "sideload", "bootloader", "no"].contains(state)
@@ -107,7 +107,7 @@ struct DeviceTools {
             switch state {
             case "device":
                 if serial.hasPrefix("emulator-") { connection = "模拟器" }
-                else if serial.contains(":") || serial.hasSuffix("._adb-tls-connect._tcp") { connection = "Wi-Fi" }
+                else if DeviceID(platform: .android, serial: serial).isAndroidEndpoint { connection = "Wi-Fi" }
                 else { connection = "已连接" }
             case "unauthorized": connection = "请在设备上授权 USB 调试"
             case "offline": connection = "离线"
@@ -116,22 +116,74 @@ struct DeviceTools {
             return Device(id: DeviceID(platform: .android, serial: serial), name: model ?? serial,
                           connection: connection, ready: state == "device", transport: transport)
         }
+        let resolved = await withTaskGroup(of: (Int, Device).self) { group in
+            for (index, device) in connections.enumerated() {
+                group.addTask { (index, await resolveAndroidIdentity(device)) }
+            }
+            var detected: [(Int, Device)] = []
+            for await result in group { detected.append(result) }
+            return detected.sorted { $0.0 < $1.0 }.map(\.1)
+        }
+        var devices: [Device] = []
+        for device in resolved {
+            guard let index = devices.firstIndex(where: { $0.id == device.id }) else {
+                devices.append(device)
+                continue
+            }
+            let previouslySelected = known.contains { $0.usesSameADBConnection(as: device) }
+            if device.ready && (!devices[index].ready || previouslySelected) {
+                devices[index] = device
+            }
+        }
+        return devices
+    }
+
+    private func resolveAndroidIdentity(_ device: Device) async -> Device {
+        guard device.id.isAndroidEndpoint else { return device }
+        let endpoint = device.adbAddress
+        if device.ready, let stableID = await androidStableID(for: device) {
+            return Device(id: stableID, name: device.name, connection: device.connection, ready: true,
+                          transport: device.transport, adbSerial: endpoint)
+        }
+        return Device(id: DeviceID(platform: .android, serial: "pending:\(endpoint)"),
+                      name: device.name,
+                      connection: device.ready ? "无法确认设备身份" : device.connection, ready: false,
+                      transport: device.transport, adbSerial: endpoint)
+    }
+
+    private func androidStableID(for device: Device) async -> DeviceID? {
+        if device.adbAddress.hasPrefix("emulator-") {
+            let keys = ["ro.boot.qemu.avd_name", "ro.kernel.qemu.avd_name"]
+            for key in keys {
+                if let name = await androidProperty(key, device: device) {
+                    return DeviceID(platform: .android, serial: name, kind: .androidAVD)
+                }
+            }
+            return nil
+        }
+        guard let serial = await androidProperty("ro.serialno", device: device) else { return nil }
+        let id = DeviceID(platform: .android, serial: serial)
+        return id.isAndroidEndpoint ? nil : id
+    }
+
+    private func androidProperty(_ key: String, device: Device) async -> String? {
+        guard let value = try? await android(device.adbTarget + ["shell", "getprop", key]),
+              !value.isEmpty, !value.contains(where: \.isNewline),
+              !["unknown", "null", "none"].contains(value.lowercased()) else { return nil }
+        return value
     }
 
     func iosDevices(known: [Device]) async throws -> [Device] {
         guard let ideviceID, iproxy != nil else {
             throw CommandError(message: "找不到 idevice_id 或 iproxy，请安装 libimobiledevice 和 libusbmuxd。")
         }
-        async let usbList = ToolProcess.run(ideviceID, ["-l"])
-        async let networkList = ToolProcess.run(ideviceID, ["-n"])
-        let (usbOutput, networkOutput) = try await (usbList, networkList)
-        let usb = Self.serials(usbOutput)
-        let network = Self.serials(networkOutput)
+        let output = try await ToolProcess.run(ideviceID, [])
+        let connections = Self.iosConnections(output)
         var devices: [Device] = []
         var modelNames: [String: String]?
-        for serial in usb.union(network).sorted() {
+        for (serial, connection) in connections.sorted(by: { $0.key < $1.key }) {
             let id = DeviceID(platform: .ios, serial: serial)
-            let isUSB = usb.contains(serial)
+            let isUSB = connection == .usb
             let name: String
             if let previous = known.first(where: { $0.id == id }) {
                 name = previous.name
@@ -152,7 +204,8 @@ struct DeviceTools {
                     name = "\(family) · \(serial.suffix(6))"
                 }
             }
-            devices.append(Device(id: id, name: name, connection: isUSB ? "USB" : "Wi-Fi", ready: true))
+            devices.append(Device(id: id, name: name, connection: connection.title, ready: true,
+                                  iosConnection: connection))
         }
         return devices
     }
@@ -176,10 +229,18 @@ struct DeviceTools {
         return names
     }
 
-    private static func serials(_ output: String) -> Set<String> {
-        Set(output.split(whereSeparator: \.isNewline).map(String.init).filter {
-            $0.count >= 20 && $0.allSatisfy { $0.isHexDigit || $0 == "-" }
-        })
+    private static func iosConnections(_ output: String) -> [String: IOSConnection] {
+        var connections: [String: IOSConnection] = [:]
+        for line in output.split(whereSeparator: \.isNewline) {
+            let fields = line.split(whereSeparator: \.isWhitespace)
+            guard fields.count == 2,
+                  let connection = IOSConnection(rawValue: String(fields[1])),
+                  fields[0].count >= 20,
+                  fields[0].allSatisfy({ $0.isHexDigit || $0 == "-" }) else { continue }
+            let serial = String(fields[0])
+            if connections[serial] != .usb { connections[serial] = connection }
+        }
+        return connections
     }
 
     func startProxy(_ tunnel: Tunnel) throws -> ToolProcess {

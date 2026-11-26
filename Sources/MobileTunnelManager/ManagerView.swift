@@ -14,35 +14,26 @@ struct ManagerView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
-                ForEach(Platform.allCases, id: \.self) { platform in
-                    Section(platform.title) {
-                        let devices = manager.listedDevices.filter { $0.id.platform == platform }
-                        ForEach(devices) { device in
-                            Label {
-                                VStack(alignment: .leading, spacing: 3) {
-                                    Text(device.name)
-                                        .font(.callout.weight(.medium))
-                                        .lineLimit(1)
-                                    Text(device.connection)
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-                                        .lineLimit(2)
-                                }
-                            } icon: {
-                                Image(systemName: platform.icon)
-                                    .foregroundStyle(.secondary)
-                                    .frame(width: 19)
-                            }
-                            .tag(device.id)
-                            .padding(.vertical, 5)
-                        }
+                Section("当前设备") {
+                    ForEach(manager.devices) { device in
+                        deviceRow(device)
+                    }
+                    if manager.devices.isEmpty && manager.discoveryErrors.isEmpty {
+                        Text("无设备").font(.caption).foregroundStyle(.secondary)
+                    }
+                    ForEach(Platform.allCases, id: \.self) { platform in
                         if let error = manager.discoveryErrors[platform] {
                             Label(error, systemImage: "exclamationmark.triangle")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                                 .textSelection(.enabled)
-                        } else if devices.isEmpty {
-                            Text("无设备").font(.caption).foregroundStyle(.secondary)
+                        }
+                    }
+                }
+                if !manager.offlineDevices.isEmpty {
+                    Section("离线配置") {
+                        ForEach(manager.offlineDevices) { device in
+                            deviceRow(device)
                         }
                     }
                 }
@@ -81,7 +72,7 @@ struct ManagerView: View {
                         .background(.orange.opacity(0.12))
                 }
                 if let device {
-                    deviceDetail(device)
+                    deviceDetail(device).id(device.id)
                 } else {
                     ContentUnavailableView("选择一台设备", systemImage: "iphone",
                                            description: Text("连接 iPhone、iPad 或已开启调试的 Android 设备。"))
@@ -90,9 +81,8 @@ struct ManagerView: View {
             }
             .background(Color(nsColor: .windowBackgroundColor))
         }
-        .onChange(of: manager.listedDevices.map(\.id), initial: true) { _, ids in
-            if let selection, ids.contains(selection) { return }
-            selection = manager.listedDevices.first(where: \.ready)?.id ?? ids.first
+        .onChange(of: DeviceSelection(devices: manager.listedDevices), initial: true) { before, after in
+            selection = after.selected(selection, after: before)
         }
         .sheet(item: $editor) { request in
             TunnelEditor(request: request, onSave: manager.addOrUpdate)
@@ -108,8 +98,28 @@ struct ManagerView: View {
         }
     }
 
+    private func deviceRow(_ device: Device) -> some View {
+        Label {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(manager.displayName(for: device))
+                    .font(.callout.weight(.medium))
+                    .lineLimit(1)
+                Text("\(device.id.platform.title) · \(device.connection)")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
+        } icon: {
+            Image(systemName: device.id.platform.icon)
+                .foregroundStyle(.secondary)
+                .frame(width: 19)
+        }
+        .tag(device.id)
+        .padding(.vertical, 5)
+    }
+
     private func deviceDetail(_ device: Device) -> some View {
-        let tunnels = manager.settings.tunnels.filter { $0.device == device.id }
+        let tunnels = manager.tunnels(for: device.id)
         return VStack(alignment: .leading, spacing: 0) {
             deviceHeader(device)
                 .padding(.horizontal, 24)
@@ -128,11 +138,21 @@ struct ManagerView: View {
                     Label("添加转发", systemImage: "plus")
                 }
                 .buttonStyle(.borderedProminent)
+                .disabled(device.id.isAndroidEndpoint)
                 .keyboardShortcut("n")
             }
             .padding(.horizontal, 24)
             .padding(.vertical, 14)
 
+            if device.id.isAndroidEndpoint {
+                Text(device.adbSerial == nil
+                     ? "这组旧规则只记录了 ADB 地址。请在确认身份的设备下重新添加。"
+                     : "确认设备身份后可添加转发。请检查设备授权和连接状态。")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 12)
+            }
             if tunnels.isEmpty {
                 ContentUnavailableView("还没有转发规则", systemImage: "arrow.left.arrow.right",
                                        description: Text("添加规则，设置 Mac 和设备的 TCP 端口。"))
@@ -161,7 +181,7 @@ struct ManagerView: View {
                 .background(Color.accentColor.opacity(0.10), in: RoundedRectangle(cornerRadius: 11))
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 3) {
-                Text(device.name)
+                Text(manager.displayName(for: device))
                     .font(.system(size: 25, weight: .semibold))
                     .lineLimit(1)
                 HStack(spacing: 6) {
@@ -182,7 +202,7 @@ struct ManagerView: View {
             .help("查看设备标识")
             .popover(isPresented: $showDeviceInfo, arrowEdge: .bottom) {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(device.id.platform == .ios ? "UDID" : "设备序列号").font(.headline)
+                    Text(device.id.platform == .ios ? "UDID" : "设备标识").font(.headline)
                     Text(device.id.serial)
                         .font(.system(.callout, design: .monospaced))
                         .textSelection(.enabled)

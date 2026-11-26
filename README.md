@@ -32,6 +32,10 @@ The app shows custom iOS device names when available. When the device reports a 
 
 Select a device, add a rule, and turn on its switch. An active status means ADB registered the forward or the proxy has started listening. The destination service still needs to be running. Rules are saved in `~/Library/Application Support/MobileTunnelManager/tunnels.json`.
 
+Rules belong to a specific device. Disconnecting it moves its rules to **Offline configurations** (离线配置), where you can still inspect them. For Android over Wi-Fi, the app uses the device serial rather than the network address. Rules saved by an older version using an ADB network address or emulator port remain available offline and must be recreated under the intended device.
+
+For iOS over Wi-Fi, the app retains the device and any existing Mac listeners for up to 12 seconds after the last discovery. New forwards wait until the device is detected again.
+
 Preferences (偏好设置) has separate options to launch at login and restore previously enabled rules when the app starts. Turn on both to restore forwarding at login. macOS may ask you to approve the login item under **System Settings → General → Login Items & Extensions**.
 
 ## Port conflicts

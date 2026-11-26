@@ -8,8 +8,24 @@ enum Platform: String, Codable, CaseIterable {
 }
 
 struct DeviceID: Hashable, Codable {
+    enum Kind: String, Codable { case androidAVD }
+
     let platform: Platform
     let serial: String
+    var kind: Kind? = nil
+
+    var isAndroidEndpoint: Bool {
+        platform == .android && kind == nil
+            && (serial.contains(":") || serial.hasPrefix("emulator-")
+                || serial.contains("._adb-tls-connect._tcp"))
+    }
+}
+
+enum IOSConnection: String {
+    case usb = "(USB)"
+    case wifi = "(Network)"
+
+    var title: String { self == .usb ? "USB" : "Wi-Fi" }
 }
 
 struct Device: Identifiable {
@@ -18,9 +34,50 @@ struct Device: Identifiable {
     let connection: String
     let ready: Bool
     var transport: String? = nil
+    var adbSerial: String? = nil
+    var iosConnection: IOSConnection? = nil
 
+    var adbAddress: String { adbSerial ?? id.serial }
     var adbTarget: [String] {
-        transport.map { ["-t", $0] } ?? ["-s", id.serial]
+        transport.map { ["-t", $0] } ?? ["-s", adbAddress]
+    }
+
+    func usesSameADBConnection(as other: Device) -> Bool {
+        id == other.id && transport == other.transport && adbAddress == other.adbAddress
+    }
+}
+
+struct IOSWiFiPresence {
+    private var lastSeen: [DeviceID: (device: Device, time: ContinuousClock.Instant)] = [:]
+
+    mutating func temporarilyMissing(from detected: [Device], at now: ContinuousClock.Instant) -> [Device] {
+        let detectedIDs = Set(detected.map(\.id))
+        for device in detected {
+            if device.iosConnection == .wifi {
+                lastSeen[device.id] = (device, now)
+            } else {
+                lastSeen.removeValue(forKey: device.id)
+            }
+        }
+        lastSeen = lastSeen.filter { $0.value.time.duration(to: now) < .seconds(12) }
+        return lastSeen.values.map(\.device).filter { !detectedIDs.contains($0.id) }
+    }
+}
+
+struct DeviceSelection: Equatable {
+    let listed: [DeviceID]
+    let ready: [DeviceID]
+
+    init(devices: [Device]) {
+        listed = devices.map(\.id)
+        ready = devices.filter(\.ready).map(\.id)
+    }
+
+    func selected(_ current: DeviceID?, after previous: Self) -> DeviceID? {
+        guard let current, listed.contains(current) else { return ready.first ?? listed.first }
+        if ready.contains(current) { return current }
+        let newlyReady = ready.filter { !previous.ready.contains($0) }
+        return newlyReady.first { $0.platform == current.platform } ?? newlyReady.first ?? current
     }
 }
 

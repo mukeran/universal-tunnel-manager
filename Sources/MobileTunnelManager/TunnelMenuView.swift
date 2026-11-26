@@ -34,10 +34,11 @@ struct TunnelMenuView: View {
     private var tunnelGroups: some View {
         VStack(alignment: .leading, spacing: 8) {
             ForEach(manager.listedDevices) { device in
-                let tunnels = manager.settings.tunnels.filter { $0.device == device.id }
+                let tunnels = manager.tunnels(for: device.id)
                 if !tunnels.isEmpty {
                     VStack(alignment: .leading, spacing: 2) {
-                        Label(device.name, systemImage: device.id.platform.icon)
+                        let name = manager.displayName(for: device)
+                        Label(device.ready ? name : "\(name) · 离线", systemImage: device.id.platform.icon)
                             .font(.caption.weight(.medium))
                             .foregroundStyle(.secondary)
                             .lineLimit(1)
